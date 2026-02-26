@@ -6,15 +6,24 @@ import { Language } from '@/app/page';
 
 export const WorkSection = ({ lang }: { lang: Language }) => {
   const content = {
-    EN: { title: "Selected Works" },
-    MN: { title: "Шилдэг бүтээлүүд" }
+    EN: { 
+      title: "Experience & Projects",
+      subtitle: "Recent professional experience as a Software Engineer and Full-Stack Developer."
+    },
+    MN: { 
+      title: "Туршлага ба Төслүүд",
+      subtitle: "Програм хангамжийн инженер болон Фулл-Стек хөгжүүлэгчийн сүүлийн үеийн туршлага."
+    }
   };
+
+  const t = content[lang];
 
   return (
     <div className="w-full max-w-5xl mx-auto py-12">
-      <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl font-bold">{content[lang].title}</h2>
+      <div className="flex flex-col items-center mb-12 text-center">
+        <h2 className="text-3xl font-bold">{t.title}</h2>
         <div className="h-1 w-12 bg-accent mt-2 rounded-full" />
+        <p className="mt-4 text-white/60">{t.subtitle}</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

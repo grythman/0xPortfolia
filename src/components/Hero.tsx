@@ -7,15 +7,17 @@ export const Hero = ({ lang }: { lang: Language }) => {
   const content = {
     EN: {
       greeting: "Hello, I'm",
-      role: "Designer & Web Developer",
-      desc: "Crafting digital experiences that merge artistic vision with technical precision.",
-      cta: "View My Work"
+      name: "Tuguldur Baatarsuren",
+      role: "AI-Augmented Full-Stack Developer",
+      desc: "Software Engineer specializing in user-centric digital solutions and high-performance applications. I bridge the gap between robust backend systems and intuitive UX.",
+      cta: "View Experience"
     },
     MN: {
       greeting: "Сайн байна уу, намайг",
-      role: "Дизайнер ба Вэб Хөгжүүлэгч",
-      desc: "Урлагийн алсын хараа болон техникийн нарийвчлалыг хослуулсан дижитал туршлагыг бүтээж байна.",
-      cta: "Миний бүтээлүүдийг үзэх"
+      name: "Түгүүлдэр Баатарсүрэн",
+      role: "AI-Ашигласан Фулл-Стек Хөгжүүлэгч",
+      desc: "Хэрэглэгчид төвлөрсөн дижитал шийдэл, өндөр гүйцэтгэлтэй аппликейшн хөгжүүлэлтийн мэргэжилтэн. Би арын систем болон хэрэглэгчийн туршлагыг холбодог.",
+      cta: "Туршлага үзэх"
     }
   };
 
@@ -24,7 +26,7 @@ export const Hero = ({ lang }: { lang: Language }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center w-full">
       <h1 className="text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg max-w-4xl mx-auto">
-        {t.greeting} <span className="text-accent">Alex Rivers</span> –<br /> {t.role}
+        {t.greeting} <span className="text-accent">{t.name}</span> –<br /> {t.role}
       </h1>
       <p className="mt-6 text-white/60 text-lg max-w-2xl mx-auto">
         {t.desc}
