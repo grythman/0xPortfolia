@@ -1,12 +1,19 @@
+
 import React from 'react';
 import Image from 'next/image';
 import { Projects } from '@/lib/placeholder-images';
+import { Language } from '@/app/page';
 
-export const WorkSection = () => {
+export const WorkSection = ({ lang }: { lang: Language }) => {
+  const content = {
+    EN: { title: "Selected Works" },
+    MN: { title: "Шилдэг бүтээлүүд" }
+  };
+
   return (
     <div className="w-full max-w-5xl mx-auto py-12">
       <div className="flex flex-col items-center mb-12">
-        <h2 className="text-3xl font-bold">Selected Works</h2>
+        <h2 className="text-3xl font-bold">{content[lang].title}</h2>
         <div className="h-1 w-12 bg-accent mt-2 rounded-full" />
       </div>
       
